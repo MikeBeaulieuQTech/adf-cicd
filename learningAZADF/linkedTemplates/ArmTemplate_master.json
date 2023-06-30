@@ -1,0 +1,84 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "learningAZADF"
+		},
+		"learningAZDataDestination_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'learningAZDataDestination'"
+		},
+		"learningAZDataSource_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'learningAZDataSource'"
+		},
+		"ADLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://perlovskybugbash.dfs.core.windows.net"
+		},
+		"AKV_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://daperlov-dev.vault.azure.net/"
+		},
+		"SQLDB_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "sqldbconnection"
+		},
+		"learningAZDataDestination_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storagelearningazdata.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "learningAZADF_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"learningAZDataDestination_accountKey": {
+						"value": "[parameters('learningAZDataDestination_accountKey')]"
+					},
+					"learningAZDataSource_connectionString": {
+						"value": "[parameters('learningAZDataSource_connectionString')]"
+					},
+					"AKV_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AKV_properties_typeProperties_baseUrl')]"
+					},
+					"learningAZDataDestination_properties_typeProperties_url": {
+						"value": "[parameters('learningAZDataDestination_properties_typeProperties_url')]"
+					},
+					"ADLS_properties_typeProperties_url": {
+						"value": "[parameters('ADLS_properties_typeProperties_url')]"
+					},
+					"SQLDB_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('SQLDB_properties_typeProperties_connectionString_secretName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
