@@ -1,0 +1,280 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "learningAZDataDestination",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "2023keres_moves.csv",
+				"fileSystem": "chess-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "game_id",
+				"type": "String"
+			},
+			{
+				"name": "move_no",
+				"type": "String"
+			},
+			{
+				"name": "move_no_pair",
+				"type": "String"
+			},
+			{
+				"name": "player",
+				"type": "String"
+			},
+			{
+				"name": "notation",
+				"type": "String"
+			},
+			{
+				"name": "move",
+				"type": "String"
+			},
+			{
+				"name": "from_square",
+				"type": "String"
+			},
+			{
+				"name": "to_square",
+				"type": "String"
+			},
+			{
+				"name": "piece",
+				"type": "String"
+			},
+			{
+				"name": "color",
+				"type": "String"
+			},
+			{
+				"name": "fen",
+				"type": "String"
+			},
+			{
+				"name": "is_check",
+				"type": "String"
+			},
+			{
+				"name": "is_check_mate",
+				"type": "String"
+			},
+			{
+				"name": "is_fifty_moves",
+				"type": "String"
+			},
+			{
+				"name": "is_fivefold_repetition",
+				"type": "String"
+			},
+			{
+				"name": "is_game_over",
+				"type": "String"
+			},
+			{
+				"name": "is_insufficient_material",
+				"type": "String"
+			},
+			{
+				"name": "white_count",
+				"type": "String"
+			},
+			{
+				"name": "black_count",
+				"type": "String"
+			},
+			{
+				"name": "white_pawn_count",
+				"type": "String"
+			},
+			{
+				"name": "black_pawn_count",
+				"type": "String"
+			},
+			{
+				"name": "white_queen_count",
+				"type": "String"
+			},
+			{
+				"name": "black_queen_count",
+				"type": "String"
+			},
+			{
+				"name": "white_bishop_count",
+				"type": "String"
+			},
+			{
+				"name": "black_bishop_count",
+				"type": "String"
+			},
+			{
+				"name": "white_knight_count",
+				"type": "String"
+			},
+			{
+				"name": "black_knight_count",
+				"type": "String"
+			},
+			{
+				"name": "white_rook_count",
+				"type": "String"
+			},
+			{
+				"name": "black_rook_count",
+				"type": "String"
+			},
+			{
+				"name": "captured_score_for_white",
+				"type": "String"
+			},
+			{
+				"name": "captured_score_for_black",
+				"type": "String"
+			},
+			{
+				"name": "fen_row1_white_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row2_white_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row3_white_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row4_white_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row5_white_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row6_white_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row7_white_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row8_white_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row1_white_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row2_white_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row3_white_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row4_white_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row5_white_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row6_white_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row7_white_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row8_white_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row1_black_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row2_black_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row3_black_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row4_black_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row5_black_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row6_black_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row7_black_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row8_black_count",
+				"type": "String"
+			},
+			{
+				"name": "fen_row1_black_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row2_black_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row3_black_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row4_black_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row5_black_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row6_black_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row7_black_value",
+				"type": "String"
+			},
+			{
+				"name": "fen_row8_black_value",
+				"type": "String"
+			},
+			{
+				"name": "move_sequence",
+				"type": "String"
+			}
+		]
+	}
+}
