@@ -1,0 +1,140 @@
+{
+	"name": "Games",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "learningAZDataDestination",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "2023keres_game_info.csv",
+				"fileSystem": "chess-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "game_id",
+				"type": "String"
+			},
+			{
+				"name": "game_order",
+				"type": "String"
+			},
+			{
+				"name": "event",
+				"type": "String"
+			},
+			{
+				"name": "site",
+				"type": "String"
+			},
+			{
+				"name": "date_played",
+				"type": "String"
+			},
+			{
+				"name": "round",
+				"type": "String"
+			},
+			{
+				"name": "white",
+				"type": "String"
+			},
+			{
+				"name": "black",
+				"type": "String"
+			},
+			{
+				"name": "result",
+				"type": "String"
+			},
+			{
+				"name": "white_elo",
+				"type": "String"
+			},
+			{
+				"name": "white_rating_diff",
+				"type": "String"
+			},
+			{
+				"name": "black_elo",
+				"type": "String"
+			},
+			{
+				"name": "black_rating_diff",
+				"type": "String"
+			},
+			{
+				"name": "white_title",
+				"type": "String"
+			},
+			{
+				"name": "black_title",
+				"type": "String"
+			},
+			{
+				"name": "winner",
+				"type": "String"
+			},
+			{
+				"name": "winner_elo",
+				"type": "String"
+			},
+			{
+				"name": "loser",
+				"type": "String"
+			},
+			{
+				"name": "loser_elo",
+				"type": "String"
+			},
+			{
+				"name": "winner_loser_elo_diff",
+				"type": "String"
+			},
+			{
+				"name": "eco",
+				"type": "String"
+			},
+			{
+				"name": "termination",
+				"type": "String"
+			},
+			{
+				"name": "time_control",
+				"type": "String"
+			},
+			{
+				"name": "utc_date",
+				"type": "String"
+			},
+			{
+				"name": "utc_time",
+				"type": "String"
+			},
+			{
+				"name": "variant",
+				"type": "String"
+			},
+			{
+				"name": "ply_count",
+				"type": "String"
+			},
+			{
+				"name": "date_created",
+				"type": "String"
+			},
+			{
+				"name": "file_name",
+				"type": "String"
+			}
+		]
+	}
+}
